@@ -11,9 +11,8 @@
     <el-container>
       <!-- 侧边栏 -->
       <el-aside :width="asideWidth">
-        <div class="aside_scale" @click="changeCollapse">
-          <i class="el-icon-s-operation"></i>
-        </div>
+        <div class="toggle-button" @click="toggleCollpase">|||</div>
+       
         <el-menu
           :collapse="isCollapse"
           background-color="#333744"
@@ -73,7 +72,7 @@ export default {
       window.sessionStorage.clear()
       this.$router.push('/login')
     },
-    changeCollapse () {
+    toggleCollpase () {
       this.isCollapse = !this.isCollapse
       this.asideWidth = this.isCollapse ? '64px' : '200px'
     },
@@ -109,14 +108,14 @@ export default {
     color: white;
   }
 }
-.el-aside {
-  background-color: #333744;
-  .aside_scale {
-    width: 100%;
-    height: 25px;
-    background-color: #12c2e9;
-    cursor: pointer;
-    text-align: center;
+.toggle-button {
+   background: #4a5064;
+  font-size: 10px;
+  text-align: center;
+  line-height: 24px;
+  color: #fff;
+  letter-spacing: 0.2em;
+  cursor: pointer;
   }
   .el-menu {
     border-right: none;
@@ -124,7 +123,7 @@ export default {
       margin-right: 10px;
     }
   }
-}
+
 .el-main {
   background-color: #eaedf1;
 }

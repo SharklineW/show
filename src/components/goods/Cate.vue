@@ -27,7 +27,7 @@ show-index index-text="#" border :show-row-hover="false">
 	style="color:lightgreen;"></i>
 	<i class="el-icon-error" v-else style="color:red;"></i>
 </template>
-<template v-slot:istop="scope">
+<template v-slot="istop">
 		<el-tag  v-if="scope.row.cat_level === 0" t
 	type="primary" size="mini">一级</el-tag>
 	<el-tag  v-if="scope.row.cat_level === 1" t

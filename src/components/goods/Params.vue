@@ -37,7 +37,7 @@
         <!-- 展开行 --> 
          <el-table-column type='expand'>
            <!-- 循环导入数据标签 -->
-           <template v-slot="scope">
+           <template slot-scope="scope">
            <el-tag v-for="(item,i) in scope.row.attr_vals" closable
            :key="i" @close="handleClose(i,scope.row)">{{item}}</el-tag>
              <!-- 输入新建标签 -->
@@ -58,7 +58,7 @@
         <el-table-column type='index'></el-table-column>
         <el-table-column label="参数名称" prop="attr_name"></el-table-column>
         <el-table-column label="操作">
-  <template v-slot="scope">
+  <template slot-scope="scope">
 	<el-button type="primary" size="mini" class="el-icon-edit" @click="showEditDialog(scope.row.attr_id)" 
 	>编辑</el-button>
 	<el-button type="danger" size="mini" class="el-icon-delate" @click="removeParams(scope.row.attr_id)"
@@ -78,7 +78,7 @@
 
           <el-table-column type='expand'>
            <!-- 循环导入数据标签 -->
-           <template v-slot="scope">
+           <template slot-scope="scope">
            <el-tag v-for="(item,i) in scope.row.attr_vals" closable
            :key="i" @close="handleClose(i,scope.row)">{{item}}</el-tag>
              <!-- 输入新建标签 -->
@@ -100,7 +100,7 @@
         <el-table-column type='index'></el-table-column>
         <el-table-column label="参数名称" prop="attr_name"></el-table-column>
         <el-table-column label="操作">
-  <template v-slot="scope">
+  <template slot-scope="scope">
 	<el-button type="primary" size="mini" class="el-icon-edit" @click="showEditDialog(scope.row.attr_id)" 
 	 >编辑</el-button>
 	<el-button type="danger" size="mini" class="el-icon-delate" @click="removeParams(scope.row.attr_id)"
@@ -151,16 +151,6 @@
     <el-button type="primary" @click="editParams">确 定</el-button>
   </span>
 </el-dialog>
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -14,16 +14,16 @@ const Roles = () =>
     import ('../components/power/Roles.vue')
 const Cate = () =>
     import ('../components/goods/Cate.vue')
-    // const Goods = () =>
-    //     import ('../components/goods/Goods.vue')
+const Goods = () =>
+    import ('../components/goods/Goods.vue')
 const Params = () =>
     import ('../components/goods/Params.vue')
-    // const AddGoods = () =>
-    //     import ('../components/goods/AddGoods.vue')
-    // const Order = () =>
-    //     import ('../components/order/Order.vue')
-    // const Report = () =>
-    //     import ('../components/report/Report.vue')
+const Add = () =>
+    import ('../components/goods/Add.vue')
+const Order = () =>
+    import ('../components/order/Order.vue')
+const Report = () =>
+    import ('../components/report/Report.vue')
 
 Vue.use(VueRouter)
 
@@ -79,22 +79,22 @@ const routes = [{
                 }
             },
 
-            // {
-            //     path: '/goods',
-            //     name: 'goods',
-            //     component: Goods,
-            //     meta: {
-            //         title: '商品列表'
-            //     }
-            // },
-            // {
-            //     path: '/goods/addGoods',
-            //     name: 'addGoods',
-            //     component: AddGoods,
-            //     meta: {
-            //         title: '添加商品'
-            //     }
-            // },
+            {
+                path: '/goods',
+                name: 'goods',
+                component: Goods,
+                meta: {
+                    title: '商品列表'
+                }
+            },
+            {
+                path: '/goods/add',
+                name: 'add',
+                component: Add,
+                meta: {
+                    title: '添加商品'
+                }
+            },
             {
                 path: '/params',
                 name: 'params',
@@ -111,22 +111,22 @@ const routes = [{
                     title: '商品分类'
                 }
             },
-            // {
-            //     path: '/orders',
-            //     name: 'orders',
-            //     component: Order,
-            //     meta: {
-            //         title: '订单列表'
-            //     }
-            // },
-            // {
-            //     path: '/reports',
-            //     name: 'reports',
-            //     component: Report,
-            //     meta: {
-            //         title: '数据报表'
-            //     }
-            // }
+            {
+                path: '/orders',
+                name: 'orders',
+                component: Order,
+                meta: {
+                    title: '订单列表'
+                }
+            },
+            {
+                path: '/reports',
+                name: 'reports',
+                component: Report,
+                meta: {
+                    title: '数据报表'
+                }
+            }
         ]
     }
 ]
